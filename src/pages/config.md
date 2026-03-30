@@ -5,14 +5,12 @@
     - [Adobe Journey Optimizer](/index.md)
     - Endpoint reference
         - [Authentication](/references/authentication.md)
-        - Journeys
-            - [Journeys list & details](/references/journeys-retrieve.md)
-            - [Journey capping & throttling](/references/journeys-throttling.md)
-        - Campaigns
-            - [Action campaigns](/references/campaigns-retrieve.md)
-            - [API-triggered campaigns](/references/messaging.md)
-            - [Campaign previews & proofs](/references/simulations.md)
-            - [Datasets enablement for Orchestrated campaign](/references/orchestrated-campaign-dataset.md)
+        - [Journey list & detail](/references/journeys-retrieve.md)
+        - [Journey capping & throttling](/references/journeys-throttling.md)
+        - [Action campaigns](/references/campaigns-retrieve.md)
+        - [API-triggered campaigns](/references/messaging.md)
+        - [Campaign previews & proofs](/references/simulations.md)
+        - [Orchestrated campaign datasets](/references/orchestrated-campaign-dataset.md)
         - [Content templates & fragments](/references/content.md)
         - [Suppression & allow lists](/references/suppression.md)
     - Code samples

@@ -1,9 +1,9 @@
 ---
-title: List and retrieve journeys
-description: List journeys with filters and pagination, retrieve journey definitions, and access related campaign metadata.
+title: Journey list & detail
+description: List journeys with filters and pagination, retrieve a single journey, and access related campaign metadata.
 keywords: 
   - Journey Optimizer
-  - API Documentation
+  - Developer documentation
 layout: none
 ---
 
