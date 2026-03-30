@@ -1,6 +1,6 @@
 ---
-title: Trigger campaigns using APIs
-description: Trigger campaigns using APIs
+title: Execute API-triggered campaigns
+description: Run Interactive Message Execution for API-triggered campaigns—send email, SMS, or push using a campaign ID (unitary and audience executions).
 keywords: 
   - Journey Optimizer
   - API Documentation

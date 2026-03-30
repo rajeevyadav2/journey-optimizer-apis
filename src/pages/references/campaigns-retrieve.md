@@ -1,6 +1,6 @@
 ---
-title: Retrieve Action Campaigns using APIs
-description: Retrieve and filter Action campaigns using APIs.
+title: Retrieve and filter Action campaigns
+description: Query Action campaigns and related resources such as messages, variants, and workflow metadata.
 keywords: 
   - Journey Optimizer
   - API Documentation

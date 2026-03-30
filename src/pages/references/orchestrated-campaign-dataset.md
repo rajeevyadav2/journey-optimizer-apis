@@ -1,6 +1,6 @@
 ---
-title: Validate or Enable Orchestrated Campaign Extension on Dataset
-description: Learn how to validate or Enable Orchestrated Campaign Extension on Dataset using APIs.
+title: Validate and enable Orchestrated campaigns extension on datasets
+description: Check whether the Orchestrated Campaign extension can be applied to a dataset, then enable it so the dataset can be used with Orchestrated campaigns.
 keywords: 
   - Journey Optimizer
   - API Documentation

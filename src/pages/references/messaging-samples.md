@@ -1,15 +1,15 @@
 ---
-title: Trigger campaigns using APIs - Code examples
-description: Trigger campaigns using APIs - Code examples
+title: Execute API-triggered campaigns (code samples)
+description: Sample curl payloads for executing API-triggered campaigns (unitary and audience), aligned with the messaging OpenAPI reference.
 --- 
 
-# Trigger campaigns using APIs - Code examples
+# Execute API-triggered campaigns (code samples)
 
-Below code snippets are using sample Adobe Journey Optimizer API triggered campaigns.
+Below code snippets use sample Journey Optimizer triggered campaigns.
 
-For each of these examples to run, you first have to create your API triggered campaigns in the user interface and get ready with your Bearer token and API key. Note that these examples are written in curl but we support the language of your choice.
+For each of these examples to run, you first have to create your triggered campaigns in the user interface and get ready with your Bearer token and API key. Note that these examples are written in curl but we support the language of your choice.
 
-A detailed description of the API is available [here](https://developer.adobe.com/journey-optimizer-apis/references/messaging/)
+The full OpenAPI reference for this endpoint is [here](https://developer.adobe.com/journey-optimizer-apis/references/messaging/)
 
 \<br/\>\<br/\>
 
@@ -206,7 +206,7 @@ Example 6: This example is to show how to send an Email message to an existing p
 ```
 
 
-Example 7: This example is to execute API triggered marketing campaigns to a given audience using API with contextual attributes. We need to pass the campaign ID in our Audience API and, if contextual atributes are part of the message, then they will be passed in the payload like below.
+Example 7: This example runs triggered marketing campaigns for a given audience with contextual attributes. Pass the campaign ID in the audience request; if contextual attributes are part of the message, include them in the payload as below.
 
 ```json
 {

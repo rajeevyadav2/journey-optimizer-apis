@@ -1,6 +1,6 @@
 ---
-title: Loyalty Challenges (private beta)
-description: APIs for Loyalty Challenges. This feature is available in private beta.
+title: Manage loyalty challenge state (private beta)
+description: Query and update loyalty challenge participation for profiles (Loyalty Challenges; private beta).
 keywords:
   - Journey Optimizer
   - API Documentation

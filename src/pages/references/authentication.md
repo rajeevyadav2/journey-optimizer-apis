@@ -1,11 +1,11 @@
 ---
-title: Adobe Journey Optimizer APIs Authentication
-description: A collection of high-level references for all endpoints provided by Adobe Journey Optimizer APIs.
+title: Set up authentication and credentials
+description: Create an integration in Adobe Developer Console and obtain tokens and headers needed for Journey Optimizer endpoints.
 ---
 
-# Adobe Journey Optimizer APIs Authentication
+# Set up authentication and credentials
 
-Adobe Journey Optimizer API access is set up through the steps below. Each of these steps is detailed in the [Adobe Developer documentation](https://developer.adobe.com/developer-console/docs/guides/services/).
+Journey Optimizer access is set up through the steps below. Each of these steps is detailed in the [Adobe Developer documentation](https://developer.adobe.com/developer-console/docs/guides/services/).
 
 ## JWT Deprecation Notice
 
@@ -50,14 +50,14 @@ To establish a secure service-to-service Adobe Developer API session, every requ
 
 ## Permissions
 
-Ensure that the product profile associated with the API integration has the required permissions for the API you want to call.
+Ensure that the product profile associated with the integration has the required permissions for the endpoints you want to call.
 Also ensure that the [AEP role associated with the product profile](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#assign-api-to-a-role) has been give permissions in the AEP Permissions UI.
 
-An administrator can create the product profile in Adobe Admin Console and can also associate the API integration to the product profile.
+An administrator can create the product profile in Adobe Admin Console and can also associate the integration to the product profile.
 
-Depending on the API, different permissions need to be configured:
+Depending on the endpoint, different permissions need to be configured:
 
-* **Capping API** needs the "Manage Journeys Events, Data Sources and Action" permission to the targeted sandbox (Capping is configured at sandbox level).
-* **Throttling API** needs the "Manage Journeys Events, Data Sources and Action" permission to the production sandbox (Throttling can only be configured on the production sandbox)
-* **Journey API** needs the "Journey Manage" and "Journey View" permissions to the targeted sandbox.
+* **Capping** needs the "Manage Journeys Events, Data Sources and Action" permission to the targeted sandbox (Capping is configured at sandbox level).
+* **Throttling** needs the "Manage Journeys Events, Data Sources and Action" permission to the production sandbox (Throttling can only be configured on the production sandbox)
+* **Journeys** needs the "Journey Manage" and "Journey View" permissions to the targeted sandbox.
 \<br/\>\<br/\>

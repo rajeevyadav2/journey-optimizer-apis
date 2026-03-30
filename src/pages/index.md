@@ -1,13 +1,13 @@
 ---
-title: Adobe Journey Optimizer APIs
-description: A collection of high-level references for all endpoints provided by Adobe Journey Optimizer APIs.
+title: Adobe Journey Optimizer developer reference
+description: High-level references for Journey Optimizer REST endpoints and how to authenticate.
 ---
 
 <Superhero slots="heading, text"/>
 
-# Adobe Journey Optimizer APIs
+# Adobe Journey Optimizer developer reference
 
-Journey Optimizer provide RESTful APIs that allow you to programmatically perform key operations in your applications.
+Journey Optimizer exposes REST endpoints that let you programmatically perform key operations in your applications.
 
 <Resources slots="heading, links"/>
 
@@ -32,28 +32,30 @@ Adobe Journey Optimizer is built natively on the Adobe Experience Platform and c
 
 <DiscoverBlock slots="heading, link, text"/>
 
-### Get Started
+[Set up authentication and credentials](references/authentication.md)
 
-[Authenticate and access to APIs](references/authentication.md)
+[Create and manage content templates and fragments](references/content.md)
 
-Follow this tutorial to gather the required authentication credentials for all Journey Optimizer APIs.
+[Manage suppression and allow lists](references/suppression.md)
 
-### API References
+### Journeys
 
-[Suppression API](references/suppression.md)
+[List and retrieve journeys](references/journeys-retrieve.md)
 
-[Trigger campaigns using APIs](references/messaging.md)
+[Configure capping and throttling](references/journeys-throttling.md)
 
-[Journeys Capping and Throttling APIs](references/journeys-throttling.md)
+### Campaigns
 
-[Retrieve Journeys using APIs](references/journeys-retrieve.md)
+[Retrieve and filter Action campaigns](references/campaigns-retrieve.md)
 
-[Retrieve Action Campaigns using APIs](references/campaigns-retrieve.md)
+[Execute API-triggered campaigns](references/messaging.md)
 
-[Content templates & fragments APIs](references/content.md)
+[Preview campaigns and send proofs](references/simulations.md)
 
-[Simulation APIs](references/simulations.md)
+[Validate and enable Orchestrated campaign datasets](references/orchestrated-campaign-dataset.md)
 
-[Orchestrated campaigns extension for datasets](references/orchestrated-campaign-dataset.md)
+### Code samples
+
+[Execute API-triggered campaigns (code samples)](references/messaging-samples.md)
 
 \<br/\>\<br/\>

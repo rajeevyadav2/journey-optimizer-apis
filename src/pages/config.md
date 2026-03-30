@@ -2,16 +2,18 @@
     - /journey-optimizer-apis/
 
 - pages:
-    - [Adobe Journey Optimizer APIs](/index.md)
-    - API References
+    - [Adobe Journey Optimizer](/index.md)
+    - Endpoint reference
         - [Authentication](/references/authentication.md)
-        - [Suppression API](/references/suppression.md)
-        - [Trigger campaigns](/references/messaging.md)
-        - [Retrieve Journeys](/references/journeys-retrieve.md)
-        - [Retrieve & filter Action campaigns](/references/campaigns-retrieve.md)
-        - [Journeys throttling configurations](/references/journeys-throttling.md)
-        - [Content fragments & templates](/references/content.md)
-        - [Simulations API](/references/simulations.md)
-        - [Enable datasets for Orchestrated campaigns](/references/orchestrated-campaign-dataset.md)
+        - Journeys
+            - [Journeys list & details](/references/journeys-retrieve.md)
+            - [Journey capping & throttling](/references/journeys-throttling.md)
+        - Campaigns
+            - [Action campaigns](/references/campaigns-retrieve.md)
+            - [API-triggered campaigns](/references/messaging.md)
+            - [Campaign previews & proofs](/references/simulations.md)
+            - [Datasets enablement for Orchestrated campaign](/references/orchestrated-campaign-dataset.md)
+        - [Content templates & fragments](/references/content.md)
+        - [Suppression & allow lists](/references/suppression.md)
     - Code samples
-        - [Trigger campaigns using APIs](references/messaging-samples.md)
+        - [API-triggered campaigns (code samples)](/references/messaging-samples.md)

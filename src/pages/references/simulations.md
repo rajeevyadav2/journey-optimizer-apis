@@ -1,6 +1,6 @@
 ---
-title: Simulation API.
-description: APIs for sending previewing campaigns and sending proofs.
+title: Preview campaigns and send proofs
+description: Generate campaign previews for a profile and trigger asynchronous proof jobs; poll proof status.
 keywords: 
   - Journey Optimizer
   - API Documentation

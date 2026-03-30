@@ -1,6 +1,6 @@
 ---
-title: Retrieve Journeys using APIs
-description: Retrieve Journeys using APIs
+title: List and retrieve journeys
+description: List journeys with filters and pagination, retrieve journey definitions, and access related campaign metadata.
 keywords: 
   - Journey Optimizer
   - API Documentation
