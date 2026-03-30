@@ -48,6 +48,8 @@ Follow this tutorial to gather the required authentication credentials for all J
 
 [Retrieve Journeys using APIs](references/journeys-retrieve.md)
 
+[Retrieve Action Campaigns using APIs](references/campaigns-retrieve.md)
+
 [Content templates & fragments APIs](references/content.md)
 
 [Simulation APIs](references/simulations.md)
