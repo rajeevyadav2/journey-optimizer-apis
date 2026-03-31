@@ -1,27 +1,27 @@
 openapi: 3.0.1
 info:
-  title: Trigger orchestrated campaigns using APIs
-  version: 1
+  title: Trigger Orchestrated campaigns using APIs
+  version: v1
 servers:
   - url: https://platform.adobe.io/ajo/campaign-orchestration
     description: Base path URL
 tags:
-  - name: Orchestrated Campaigns APIs
+  - name: Orchestrated campaigns APIs
 paths:
-  /orchestratedCampaigns/{id}/trigger:
+  /OrchestratedCampaigns/{id}/trigger:
     post:
       tags:
-      - Orchestrated Campaigns APIs
-      summary: Trigger a signal-triggered orchestrated campaign
+      - Orchestrated campaigns APIs
+      summary: Trigger a signal-triggered Orchestrated campaign
       description: >-
-        Triggers an orchestrated campaign that is defined with ***Triggered by a signal*** scheduler option. The orchestrated campaign must be in **LIVE** status, or
+        Triggers an Orchestrated campaign that is defined with ***Triggered by a signal*** scheduler option. The Orchestrated campaign must be in **LIVE** status, or
         in **DRAFT** status with an active test session.
         
 
         A throttle guardrail enforces a **1-hour** minimum interval between triggers in production; it is not applied in test mode.
 
 
-        Option parameters can be passed in the request body.
+        Optional parameters can be passed in the request body.
       operationId: triggerOrchestratedCampaign
       parameters:
         - name: Authorization
@@ -39,7 +39,7 @@ paths:
         - name: id
           in: path
           required: true
-          description: The orchestrated campaign id
+          description: The Orchestrated campaign id
           schema:
             type: string
         - name: x-gw-ims-org-id
@@ -69,14 +69,12 @@ paths:
               - '1'
       requestBody:
         description:
-          Optional payload. Use `variables` to supply workflow variables (key-value).
+          Optional payload. Use `variables` to supply workflow parameters (key-value pairs).
           
 
           If you pass a parameter that has not been defined in the scheduler, the API call still succeeds and the parameter is propagated.
         content:
           application/json:
-            schema:
-              type: string
             examples:
               With variables:
                 description: Two parameters passed to the trigger signal
@@ -96,18 +94,15 @@ paths:
                 Success response:
                   value:
                     status: success
-                    orchestratedCampaignId: b902ba3d-8d8c-4a51-b393-8779dfe49653
+                    OrchestratedCampaignId: b902ba3d-8d8c-4a51-b393-8779dfe49653
                     message: Orchestrated campaign triggered successfully
         '400':
           description: >
-            Bad request—for example campaign not LIVE (and not DRAFT with active
-            test session), not configured as API-triggered (signal-triggered),
-            or no workflow configured
+            Bad request - Campaign is not LIVE (and not DRAFT with active test session) or not configured as signal-triggered
           content:
             application/json:
               examples:
                 Not LIVE (example):
-                  description: Not LIVE (example)
                   value:
                     type: https://ns.adobe.com/aep/errors/CJMOC-6100-400
                     title: >-
@@ -136,10 +131,10 @@ paths:
                   value:
                     type: https://ns.adobe.com/aep/errors/CJMOC-1200-404
                     title: >-
-                      Element of type orchestratedCampaign with id
+                      Element of type OrchestratedCampaign with id
                       91ea0a68-a86a-451e-b333-9f75c41dadb3 not found
                     message: >-
-                      Element of type orchestratedCampaign with id
+                      Element of type OrchestratedCampaign with id
                       91ea0a68-a86a-451e-b333-9f75c41dadb3 not found
                     status: 404
                     report:
@@ -148,7 +143,7 @@ paths:
                         traceId: 02f3835700a3b5e8fefbf27209b4e79e
                         spanId: db66ae3adb2645f7
                       additionalContext:
-                        type: orchestratedCampaign
+                        type: OrchestratedCampaign
                         id: 91ea0a68-a86a-451e-b333-9f75c41dadb3
                     at: '2026-02-27T15:17:30.184Z'
         '429':
@@ -166,12 +161,11 @@ paths:
             application/json:
               examples:
                 Throttle guardrail:
-                  description: Throttle guardrail
                   value:
                     type: https://ns.adobe.com/aep/errors/CJMOC-6104-429
                     title: >-
                       Orchestrated campaign was triggered too recently. Retry
-                      after 45 seconds
+                      after 1534 seconds
                     message: >-
                       Orchestrated campaign was triggered too recently. Retry
                       after 1534 seconds
