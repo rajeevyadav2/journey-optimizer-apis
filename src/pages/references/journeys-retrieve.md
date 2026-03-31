@@ -3,7 +3,7 @@ title: Journey list & detail
 description: List journeys with filters and pagination, retrieve a single journey, and access related campaign metadata.
 keywords: 
   - Journey Optimizer
-  - Developer documentation
+  - API Documentation
 layout: none
 ---
 
