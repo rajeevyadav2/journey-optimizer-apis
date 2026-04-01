@@ -54,6 +54,8 @@ Adobe Journey Optimizer is built natively on the Adobe Experience Platform and c
 
 [Validate and enable Orchestrated campaign datasets](references/orchestrated-campaign-dataset.md)
 
+[Trigger Orchestrated campaigns](references/oc-trigger.md)
+
 ### Code samples
 
 [Execute API-triggered campaigns (code samples)](references/messaging-samples.md)
