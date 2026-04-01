@@ -2,17 +2,29 @@ openapi: 3.0.1
 info:
   title: Trigger Orchestrated campaigns using APIs
   version: v1
+  description: >-
+   Use these APIs to trigger Orchestrated Campaigns in Adobe Journey Optimizer.
+  
+    Required permission is: `Publish Orchestrated Campaign`
+
+
+   **Related documentation:**
+
+    To learn more about Orchestration campaigns flows, refer to the product documentation [here](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/orchestrated-advanced/trigger-orchestrated-campaign).
+
+   **API paths and required headers:**
+
+    Refer to the detailed information provided within the following operations.
+  
 servers:
   - url: https://platform.adobe.io/ajo/campaign-orchestration
     description: Base path URL
-tags:
-  - name: Orchestrated campaigns APIs
 paths:
   /OrchestratedCampaigns/{id}/trigger:
     post:
       tags:
-      - Orchestrated campaigns APIs
-      summary: Trigger a signal-triggered Orchestrated campaign
+      - Orchestrated campaigns
+      summary: Trigger an Orchestrated campaign
       description: >-
         Triggers an Orchestrated campaign that is defined with ***Triggered by a signal*** scheduler option. The Orchestrated campaign must be in **LIVE** status, or
         in **DRAFT** status with an active test session.
@@ -94,11 +106,11 @@ paths:
                 Success response:
                   value:
                     status: success
-                    OrchestratedCampaignId: b902ba3d-8d8c-4a51-b393-8779dfe49653
+                    orchestratedCampaignId: b902ba3d-8d8c-4a51-b393-8779dfe49653
                     message: Orchestrated campaign triggered successfully
         '400':
-          description: >
-            Bad request - Campaign is not LIVE (and not DRAFT with active test session) or not configured as signal-triggered
+          description: >-
+            Bad request - Orchestrated campaign is not LIVE (and not DRAFT with active test session) or not configured as signal-triggered
           content:
             application/json:
               examples:
@@ -108,11 +120,11 @@ paths:
                     title: >-
                       Orchestrated campaign must be in LIVE status or DRAFT
                       status with active test session to trigger. Current
-                      status: DRAFT
+                      status: STOPPED
                     message: >-
                       Orchestrated campaign must be in LIVE status or DRAFT
                       status with active test session to trigger. Current
-                      status: DRAFT
+                      status: STOPPED
                     status: 400
                     report:
                       tenantInfo:
@@ -120,8 +132,41 @@ paths:
                         traceId: b177d17cecf111efd8f72dcadf40b294
                         spanId: c877c28c3085b4b4
                       additionalContext:
-                        status: DRAFT
+                        status: STOPPED
                     at: '2026-02-23T13:50:16.163Z'
+        '403':
+          description: Authorization error - RBAC or OLAC permissions check failure
+          content:
+            application/json:
+              examples:
+                RBAC permission issue:
+                  value:
+                    type: https://ns.adobe.com/aep/errors/CJMOC-1001-403
+                    title: Authorization error
+                    message: Authorization error
+                    status: 403
+                    report:
+                      tenantInfo:
+                        requestId: c6ByyjnUShIPMW64fKquJYZ1o4CWbxn9
+                        traceId: invalid
+                        spanId: invalid
+                      additionalContext: {}
+                    at: '2026-03-31T15:19:37.764Z'
+                OLAC check issue:
+                  value:
+                    type: https://ns.adobe.com/aep/errors/CJMOC-1215-403
+                    title: OLAC check failed for operation trigger on resource 8189ea13-5e02-412d-8615-d0ccb17662b9
+                    message: OLAC check failed for operation trigger on resource 8189ea13-5e02-412d-8615-d0ccb17662b9
+                    status: 403
+                    report:
+                      tenantInfo:
+                        requestId: sgbVgohHahzxCFQtQspxXSQgsYoSRgI8
+                        traceId: invalid
+                        spanId: invalid
+                      additionalContext:
+                        operation: trigger
+                        id: 8189ea13-5e02-412d-8615-d0ccb17662b9
+                    at: '2026-03-31T15:36:18.099Z'
         '404':
           description: Orchestrated campaign not found
           content:
@@ -146,10 +191,17 @@ paths:
                         type: OrchestratedCampaign
                         id: 91ea0a68-a86a-451e-b333-9f75c41dadb3
                     at: '2026-02-27T15:17:30.184Z'
+                API version not specified or incorrect:
+                  description: missing x-api-version header parameter or incorrect value provided
+                  value:
+                    type: about:blank
+                    title: Not found
+                    status: 404
+                    detail: No static resource apis/orchestratedCampaigns/664b280d-0c80-48c5-af81-dfa06127e45a/trigger.
+                    instance: /apis/orchestratedCampaigns/664b280d-0c80-48c5-af81-dfa06127e45a/trigger
         '429':
           description: >-
-            Too many requests — the campaign was triggered again before the
-            minimum interval
+            Too many requests — Orchestrated campaign was triggered again before the minimum interval
           headers:
             Retry-After:
               description: Number of seconds to wait before retrying
